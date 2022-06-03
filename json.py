@@ -1,3 +1,5 @@
+
+  
 import streamlit as st
 import pandas as pd
 
@@ -21,7 +23,6 @@ slack6 = slack6.replace("id: ", "\"id\": \"")
 slack6 = slack6.replace("purchased", "\"purchased\"")
 slack6 = slack6.replace("buy", "\"buy\"")
 slack6 = slack6.replace("sell", "\"sell\"")
-slack6 = slack6 + "\""
-
-
-st.code(slack6, language='json')
+if slack6 != "":
+    slack6 = slack6 + "\""
+    st.code(slack6, language='json')
