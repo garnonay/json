@@ -25,5 +25,5 @@ slack7 = slack7.replace("purchased", "\"purchased\"")
 slack7 = slack7.replace("buy", "\"buy\"")
 slack7 = slack7.replace("sell", "\"sell\"")
 if slack7 != "":
-    slack7 = slack7 + "\""
+    slack7 = "{\n" + slack7 + "\"" + "\n }"
     st.code(slack7, language='json')
